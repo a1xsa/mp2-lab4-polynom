@@ -5,6 +5,7 @@
 #include <sstream>
 void TPolynom::SetList(string t)
 {
+	this->tp.~TList();
 	Monom tmp;
 	tmp.degree = 0;
 	string tpk;

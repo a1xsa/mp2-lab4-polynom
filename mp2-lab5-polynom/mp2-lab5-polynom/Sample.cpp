@@ -8,12 +8,12 @@ using namespace std;
 void ReadFile(TList<TPolynom>& array)
 {
 	string line;
-	ifstream in("C:\\off\\mp2-lab4-polynom\\mp2-lab5-polynom\\Polynom.txt");
+	ifstream in("C:\\off\\mp2-lab5-polynom\\mp2-lab5-polynom\\Polynom.txt");
 	if (in.is_open())
 	{
+		TPolynom v;
 		while (getline(in, line))
 		{
-			TPolynom v;
 			cout << line << endl;
 			v.SetList(line);
 			v.sort();
@@ -27,7 +27,7 @@ void ReadFile(TList<TPolynom>& array)
 }
 void RecordFile(TList<TPolynom>& array)
 {
-	ofstream out("C:\\off\\mp2-lab4-polynom\\mp2-lab5-polynom\\Polynom.txt");
+	ofstream out("C:\\off\\mp2-lab5-polynom\\mp2-lab5-polynom\\Polynom.txt");
 	for (int i = 0; i < array.GetSize(); i++)
 	{
 		out<<array.GetElem(i).GetString();
@@ -66,6 +66,7 @@ l:	switch (menu())
 		v.SetList(t);
 		v.sort();
 		v.similarity();
+		v.toString();
 		array.InsertLast(v);
 		break;
 	case 2:
