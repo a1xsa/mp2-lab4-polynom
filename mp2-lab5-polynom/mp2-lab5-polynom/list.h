@@ -77,7 +77,7 @@ void TList<T>::DeleteElem(int ind)
 	{
 		int i=0;
 		Node<T>* p;
-		for (p = pfirst; i<count-1; p = p->pNext, i++);
+		for (p = pfirst; i<count-2; p = p->pNext, i++);
 		p->pNext = nullptr;
 		delete p->pNext;
 		count--;

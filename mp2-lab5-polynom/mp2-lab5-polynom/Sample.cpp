@@ -19,8 +19,7 @@ void ReadFile(TList<TPolynom>& array)
 			v.sort();
 			v.similarity();
 			v.toString();
-			array.InsertLast(v);
-			
+			array.InsertLast(v);	
 		}
 		in.close();
 	}
